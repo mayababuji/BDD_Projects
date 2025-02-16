@@ -3,4 +3,136 @@
   <groupId>DSALGOBDD</groupId>
   <artifactId>DSALGOBDD</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.0</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					          	
+				</configuration>
+			</plugin>		
+		</plugins>
+	</build>
+   <dependencies>
+   
+   <!-- to oversome the error java.lang.NoClassDefFoundError: com/sun/jna/FunctionMapper -->
+<dependency>
+    <groupId>net.java.dev.jna</groupId>
+    <artifactId>jna</artifactId>
+    <version>5.12.1</version>
+</dependency>
+
+  <!-- Library to provide set of tools and APIs to automate web browsers  for testing web applications -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.27.0</version>
+</dependency>
+
+
+
+<!-- Core component of the Cucumber framework provides APIs  to write, run, and manage feature files and step definitions -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>7.20.1</version>
+</dependency>
+
+
+
+<!-- Library that provides the Java bindings for Cucumber, enabling to write SD and hooks in Java for  Cucumber tests -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.20.1</version>
+</dependency>
+
+
+
+<!--Library that integrates Cucumber with TestNG, allowing to run Cucumber tests using the TestNG framework -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.20.1</version>
+</dependency>
+
+<!-- Library for Allure Framework.Automation Test Reporting Tool -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.29.0</version>
+</dependency>
+
+
+<!-- WebDriverManager Java library to process managing WebDriver binaries (like ChromeDriver, GeckoDriver, etc.) for Selenium WebDriver -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.9.2</version>
+</dependency>
+
+<!-- Apache log4j (for logging purpose) -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.24.2</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.24.2</version>
+</dependency>
+
+<!-- Apache POI (for Excel) -->
+  <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>5.2.3</version>
+  </dependency>
+
+  <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>5.2.3</version>
+  </dependency>
+  
+ 
+
+  <!-- Commons IO also used for Excel reading-->
+  <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.15.0</version>
+  </dependency>
+  <!-- maven dependency for integration with cucumber with extent report
+		https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.14.0</version>
+
+		</dependency>
+
+
+<dependency>
+  <groupId>com.aventstack</groupId>
+  <artifactId>chaintest-cucumber-jvm</artifactId>
+  <version>1.0.4</version>
+  <scope>provided</scope>
+</dependency>
+
+<dependency>
+          <groupId>org.freemarker</groupId>
+          <artifactId>freemarker</artifactId>
+          <version>2.3.33</version>
+    </dependency>
+			    
+  </dependencies>
+  
 </project>
