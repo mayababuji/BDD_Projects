@@ -10,7 +10,7 @@ Feature: Login to DS-ALGO Application and validate login page with different sce
   Scenario: To verify SignIn with Empty fields
     Given The user is on the DS Algo Login Page
     When User clicks on login button with all empty field
-    Then User verify the message at username as "Please fill out this field."
+    Then User verify the message at username as "Please fll out this field."
 
   #@TestScenario_login_03
   #Scenario Outline: User on login page and login with invalid inputs "<username>" and "<password>"

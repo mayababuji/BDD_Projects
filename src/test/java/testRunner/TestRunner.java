@@ -9,7 +9,8 @@ import io.cucumber.testng.CucumberOptions;
 			"html:target/cucumber-reports/dsalgo.html",
 		//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",//demo
-		"com.aventstack.chaintest.plugins.ChainTestCucumberListener:"}, //reporting purpose
+		"com.aventstack.chaintest.plugins.ChainTestCucumberListener:",
+		"rerun:target/rerun.txt"}, //reporting purpose
 			publish = true,	
 			monochrome=false,  //console output color
 			tags = "",//tags from feature file

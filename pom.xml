@@ -15,6 +15,16 @@
 					</suiteXmlFiles>
 					          	
 				</configuration>
+				<!--<executions>
+                    <execution>
+                    <id>serenity-reports</id>
+                    <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>aggregate</goal>
+                           
+                        </goals>
+                    </execution>-->
+                <!--</executions>-->
 			</plugin>		
 		</plugins>
 	</build>
@@ -110,7 +120,7 @@
       <artifactId>commons-io</artifactId>
       <version>2.15.0</version>
   </dependency>
-  <!-- maven dependency for integration with cucumber with extent report
+  <!-- maven dependency for integration with cucumber with extent report Add tech grasshopper maven dependency for Cucumber.
 		https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
@@ -118,6 +128,12 @@
 			<version>1.14.0</version>
 
 		</dependency>
+	<!-- Add ExtentReport dependency-->	
+		<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version>
+</dependency>
 
 
 <dependency>
@@ -132,6 +148,21 @@
           <artifactId>freemarker</artifactId>
           <version>2.3.33</version>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-report-resources -->
+<dependency>
+    <groupId>net.serenity-bdd</groupId>
+    <artifactId>serenity-report-resources</artifactId>
+    <version>4.2.16</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
+<dependency>
+    <groupId>net.serenity-bdd</groupId>
+    <artifactId>serenity-core</artifactId>
+    <version>4.2.16</version>
+</dependency>
+
+
 			    
   </dependencies>
   
