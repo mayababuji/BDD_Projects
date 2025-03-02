@@ -1,6 +1,6 @@
 @login
 Feature: Login to DS-ALGO Application and validate login page with different scenarios
-@TestScenario_login_01
+@TestScenario_login_01 @device_MAC @author_MAYAGHERKINS
   Scenario: To Verify that user is able to land on Login Page
     Given The user is on the DS Algo Home Page
     When The user should click the Sign in link

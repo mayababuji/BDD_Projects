@@ -3,14 +3,14 @@ package testRunner;
 import org.testng.annotations.DataProvider;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-
+//"rerun:target/rerun.txt"
 @CucumberOptions(
 	plugin = {"pretty", "html:target/dsalgoBDD.html","json:target/cucumber-reports/Cucumber.json",
 			"html:target/cucumber-reports/dsalgo.html",
 		//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",//demo
 		"com.aventstack.chaintest.plugins.ChainTestCucumberListener:",
-		"rerun:target/rerun.txt"}, //reporting purpose
+		}, //reporting purpose
 			publish = true,	
 			monochrome=false,  //console output color
 			tags = "",//tags from feature file

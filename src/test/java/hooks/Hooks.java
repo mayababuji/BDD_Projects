@@ -7,6 +7,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 
+import com.aventstack.extentreports.service.ExtentService;
+
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
@@ -28,8 +30,11 @@ public class Hooks {
 		if (browser==null) {
 			
 			driverfactory = new DriverFactory();
-			browser =ConfigReader.getBrowserType();
+			//browser =ConfigReader.getBrowserType();
+			browser=System.getProperty("browserProperty");
 			LoggerLoad.info("Testing on browser declared in the config file which is "+browser);
+			ExtentService.getInstance().setSystemInfo("os", "mac");
+		   
 			driverfactory.webdriverinitialize(browser);
 			driver = DriverFactory.getDriver();
 			driver.get(ConfigReader.getApplicationUrl("applicationurl"));
@@ -51,7 +56,7 @@ public class Hooks {
 		if (scenario.isFailed()) {
 			LoggerLoad.error("Steps Failed , Taking Screenshot");
 			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(screenshot, "image/png", "My screenshot");
+			scenario.attach(screenshot, "image/png", "Myscreenshot");
 			Allure.addAttachment("Myscreenshot",
 					new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 		

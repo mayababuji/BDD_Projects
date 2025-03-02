@@ -3,6 +3,9 @@
   <groupId>DSALGOBDD</groupId>
   <artifactId>DSALGOBDD</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+  <browserProperty>Edge</browserProperty>
+  </properties>
   <build>
 		<plugins>
 			<plugin>
@@ -13,6 +16,11 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					<systemPropertyVariables>
+					<browserProperty>
+					${browserProperty}
+					</browserProperty>
+					</systemPropertyVariables>
 					          	
 				</configuration>
 				<!--<executions>
@@ -132,7 +140,7 @@
 		<dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
-    <version>5.1.1</version>
+    <version>5.1.2</version>
 </dependency>
 
 
@@ -149,17 +157,10 @@
           <version>2.3.33</version>
     </dependency>
     
-    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-report-resources -->
 <dependency>
-    <groupId>net.serenity-bdd</groupId>
-    <artifactId>serenity-report-resources</artifactId>
-    <version>4.2.16</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
-<dependency>
-    <groupId>net.serenity-bdd</groupId>
-    <artifactId>serenity-core</artifactId>
-    <version>4.2.16</version>
+    <groupId>com.codepine.api</groupId>
+    <artifactId>testrail-api-java-client</artifactId>
+    <version>2.0.1</version>
 </dependency>
 
 
